@@ -1,0 +1,50 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+common:
+  name: Common
+  architecture: x86_64
+  ptable: one
+  environment: production
+  operatingsystem: centos5_3
+  medium: one
+  puppet_proxy: puppetmaster
+  domain: mydomain
+  title: Common
+  root_pass: $1$foreman$NW1XVtbk4/XkJqmKNrFWV0
+  compute_profile: one
+
+unusual:
+  name: Unusual
+  puppet_proxy: puppetmaster
+  title: Unusual
+
+db:
+  name: db
+  architecture: x86_64
+  ptable: one
+  environment: production
+  operatingsystem: centos5_3
+  medium: one
+  puppet_proxy: puppetmaster
+  title: db
+
+parent:
+  name: Parent
+  title: Parent
+  architecture: x86_64
+  ptable: one
+  environment: global_puppetmaster
+  operatingsystem: centos5_3
+  medium: one
+  puppet_proxy: puppetmaster
+  puppet_ca_proxy: puppetmaster
+  domain: mydomain
+  subnet: three
+  compute_profile: one
+  id: 1
+
+inherited:
+  name: inherited
+  environment: production
+  title: Parent/inherited
+  ancestry: 1
